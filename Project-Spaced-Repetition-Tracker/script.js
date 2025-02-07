@@ -7,22 +7,8 @@
 import { getUserIds } from "./storage.js";
 
 
-function populateUserDropDown() {
-  const userDropDown = document.querySelector("#user-dropDown");
-
-  getUserIds().forEach((id) => {
-    const option = document.createElement("option");
-    option.value = id;
-    option.textContent = `User ${id}`;
-    userDropDown.appendChild(option);
-  });
+function userSelected() {
+  let select = document.getElementById("user-drop-down");
+  let userId = select.value;
+  return userId;
 }
-
-
-function initialiseApp() {
-  populateUserDropDown();  
-}
-
-window.onload = function () {
-  initialiseApp();
-};

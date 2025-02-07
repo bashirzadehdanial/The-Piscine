@@ -141,3 +141,6 @@ window.onload = function () {
 
   myForm.addEventListener("submit", submit);
 };
+
+module.exports = { userSelected, displayUserData, formatDate, submit };
+

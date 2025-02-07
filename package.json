@@ -1,0 +1,12 @@
+{
+  "name": "the-piscine",
+  "version": "1.0.0",
+  "description": "Welcome to the Piscine! This repo contains the projects required to complete the Piscine module.",
+  "main": "index.js",
+  "scripts": {
+     "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

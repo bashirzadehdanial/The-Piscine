@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
-  <head>
-   <title>Spaced Repetition Tracker</title>
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <form id="agenda-form" action="">
-      <h1>Spaced Repetition Tracker</h1>
-        <select id="user-drop-down">
-          <option>Select a User</option>
-        </select>
-        <input id="datepicker" type="date" name="datepicker">
-    </form>
-    <ul id="result-box" style="margin-top:15px;"></ul>
-  </body>
+<head>
+  <script type="module" src="script.js"></script>
+  <title>Spaced Repetition Tracker</title>
+</head>
+<body>
+  <form id="agenda-form" action="">
+    <h1>Spaced Repetition Tracker</h1>
+
+    <select id="user-drop-down">
+        <option>Select a User</option>
+      </select>
+    <input id="agenda" type="text" name="agenda">
+    <input id="datepicker" type="date" name="datepicker">
+    <button type="submit">SUBMIT</button>
+  </form>
+  <ul id="result-box" style="margin-top:15px;"></ul>
+</body>
 </html>

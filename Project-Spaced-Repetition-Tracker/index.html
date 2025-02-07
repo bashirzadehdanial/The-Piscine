@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Spaced Repetition Tracker helps users manage their revision schedules.">
   <script type="module" src="script.js"></script>
   <title>Spaced Repetition Tracker</title>
 </head>
@@ -8,13 +11,20 @@
   <form id="agenda-form" action="">
     <h1>Spaced Repetition Tracker</h1>
 
-    <select id="user-drop-down">
-        <option>Select a User</option>
-      </select>
-    <input id="agenda" type="text" name="agenda">
-    <input id="datepicker" type="date" name="datepicker">
-    <button type="submit">SUBMIT</button>
+    <label for="user-drop-down">Select a User:</label>
+    <select id="user-drop-down" aria-label="User selection">
+        <option value="" disabled selected>User</option>
+    </select>
+
+    <label for="agenda">Agenda Topic:</label>
+    <input id="agenda" type="text" name="agenda" placeholder="Enter agenda topic" aria-required="true">
+
+    <label for="datepicker">Select Date:</label>
+    <input id="datepicker" type="date" name="datepicker" aria-required="true">
+
+    <button type="submit">Submit</button>
   </form>
+
   <ul id="result-box" style="margin-top:15px;"></ul>
 </body>
 </html>

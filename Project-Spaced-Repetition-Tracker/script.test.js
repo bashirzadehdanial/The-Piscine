@@ -1,5 +1,4 @@
 import {
-  userSelected,
   displayUserData,
   sortRevisionDate, 
   formatDate,

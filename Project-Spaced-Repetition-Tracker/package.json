@@ -1,12 +1,22 @@
 {
   "name": "project-spaced-repetition-tracker",
   "version": "1.0.0",
-  "description": "At Code Your Future, we like to use a learning technique called spaced repetition. The technique involves reviewing a topic over increasing time gaps (e.g. after one week, one month, three months, six months, one year).",
+  "description": "Spaced Repetition Tracker",
+  "type": "module",
   "main": "script.js",
   "scripts": {
     "test": "jest"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "devDependencies": {
+    "@babel/preset-env": "^7.26.8",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
+  }
 }

@@ -11,11 +11,14 @@ const today = new Date().toISOString().split('T')[0];
 
 function userSelected() {
   let select = document.getElementById("user-drop-down");
-  let resultBox = document.getElementById("result-box");
   
   let userId = select.value;
+  console.log(userId);
+  
   
   const data = getData(userId);
+  console.log(data);
+  
 
   displayUserData(userId, data);
 }
@@ -60,6 +63,7 @@ function sortRevisionDate(data) {
     
     return dateA - dateB;
   });
+  return sortedItems;
 }
 
 function formatDate(date) {
@@ -142,5 +146,5 @@ window.onload = function () {
   myForm.addEventListener("submit", submit);
 };
 
-module.exports = { userSelected, displayUserData, formatDate, submit };
+//module.exports = { userSelected, displayUserData, formatDate, submit };
 

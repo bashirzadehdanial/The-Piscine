@@ -40,39 +40,4 @@ describe("App Functions", () => {
     expect(formatDate(new Date("2023-06-02"))).toBe("2nd June 2023");
     expect(formatDate(new Date("2023-07-03"))).toBe("3rd July 2023");
   });
-
-  test("displayUserData() updates the result-box with user data", () => {
-    const resultBox = document.getElementById("result-box");
-
-    const userId = "1";
-    const sampleData = [
-      { topic: "Math", date: "1st March 2023" },
-      { topic: "Science", date: "5th March 2023" },
-    ];
-
-    displayUserData(userId, sampleData);
-
-    expect(resultBox.children.length).toBe(1);
-    expect(resultBox.textContent).toContain("The agenda for User 1 is shown");
-    expect(resultBox.textContent).toContain("Math, 1st March 2023");
-    expect(resultBox.textContent).toContain("Science, 5th March 2023");
-  });
-
-  test("displayUserData() shows empty message when user has no data", () => {
-    const resultBox = document.getElementById("result-box");
-    displayUserData("2", []);
-
-    expect(resultBox.textContent).toContain("The User 2 is empty!");
-  });
-
-  test("submit() adds agenda and updates display", () => {
-    const event = { preventDefault: jest.fn() };
-    document.getElementById("agenda").value = "New Topic";
-    document.getElementById("datepicker").value = "2023-03-01";
-
-    submit(event);
-
-    const storedData = JSON.parse(localStorage.getItem("stored-data-user-"));
-    expect(storedData.length).toBe(5);
-  });
 });

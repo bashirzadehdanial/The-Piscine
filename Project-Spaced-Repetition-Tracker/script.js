@@ -98,9 +98,7 @@ function submit(event) {
 
 window.addEventListener("load", function () {
   const users = getUserIds();
- 
 
-  let myForm = document.getElementById("agenda-form");
   let selectElement = document.getElementById("user-drop-down");
 
   users.forEach((value) => {
@@ -109,7 +107,10 @@ window.addEventListener("load", function () {
     option.value = value;
     selectElement.append(option);
   });
+ 
 
+  let myForm = document.getElementById("agenda-form");
+  
   selectElement.addEventListener("change", userSelected);
   myForm.elements["datepicker"].value = today;
   myForm.addEventListener("submit", submit);

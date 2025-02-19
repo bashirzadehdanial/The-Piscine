@@ -1,8 +1,6 @@
 import {
-  displayUserData,
   sortRevisionDate, 
   formatDate,
-  submit,
 } from "./script.js";
 
 describe("App Functions", () => {

@@ -98,9 +98,7 @@ function submit(event) {
 
 window.addEventListener("load", function () {
   const users = getUserIds();
-  if (users.length > 0) {
-    getData(users[0]);
-  }
+ 
 
   let myForm = document.getElementById("agenda-form");
   let selectElement = document.getElementById("user-drop-down");

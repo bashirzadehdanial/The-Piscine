@@ -65,7 +65,7 @@ function submit(event) {
   let agenda = myForm.elements["agenda"];
   let date = myForm.elements["datepicker"];
 
-  if (!agenda.value.trim()) {
+  if (!agenda.value) {
     alert("Agenda topic cannot be empty!");
     return;
   }
